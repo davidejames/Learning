@@ -1,7 +1,9 @@
-\documentclass{amsart}
+\documentclass{article}
 
 \usepackage{amsmath,amssymb}
-\usepackage{amsthm}
+\usepackage{ntheorem}
+%\usepackage{amsthm}
+\theoremstyle{break}
 \newtheorem*{theorem}{Theorem}
 
 \usepackage{tikz}
@@ -30,10 +32,30 @@ Orthogonal Projections
 \draw[dotted] (C) -- ($(A)!(C)!(B)$);
 \end{tikzpicture}
 
+\bigskip
+
+Goal: if W is a subspace in $\mathbb{R}^n$, how do we get $\hat{y}$, the
+projection in W of $\vec{y}$?
+\begin{equation}
+    \hat{y} = \text{proj}_W(\vec{y})
+\end{equation}
+
+\bigskip
 
 \begin{theorem}[Orthogonal Decomposition Theorem]
-Let some new statement about the theorem.
-Let W be a subspace with orthogonal basis
+Let W be a subspace with orthogonal basis $\{\vec{u_1} \dotsm \vec{u_p}\}$.
+Let $\vec{y} \in \mathbb{R}^n$.
+\begin{align}
+    \hat{y} = \left(\frac{\vec{y} \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1}\right)\vec{u}_1 \dotsm \left(\frac{\vec{y} \cdot \vec{u}_p}{\vec{u}_p \cdot \vec{u}_p}\right)\vec{u}_p
+\end{align}
+
+decompose...
+
+\begin{align}
+    \vec{y} = \hat{y} + \left( \vec{y} - \hat{y} \right) \\
+    \hat{y} \in W \\
+    \left( \vec{y} - \hat{y} \right) \in W^{\perp}
+\end{align}
 
 \end{theorem}
 
@@ -41,12 +63,23 @@ Let W be a subspace with orthogonal basis
 
 
 \begin{theorem}[Best Approximation Theorem]
+    Let W be a subspace of $\mathbb{R}^n$, $\vec{y} \in \mathbb{R}^n$, $\hat{y} = \text{proj}_W(\vec{y})$
+    \bigskip
+    \begin{equation}
+        \text{Then } \hat{y} \text{ is the closest point in W to }\vec{y}.
+    \end{equation}
+    and...
+    \begin{equation}
+        \text{If } \vec{y} \in W \text{ then } \hat{y} = \vec{y}
+    \end{equation}
+
 
 \end{theorem}
 
 
 \begin{theorem}[Projection is a Linear Transform]
-
+Let W be a subspace in $\mathbb{R}^n$ \\
+Let $\{\vec{u}_1 \dotsm \vec{u}_p \}$ be an orthogonal basis of W
 \end{theorem}
 
 
